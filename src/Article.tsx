@@ -1,4 +1,4 @@
-import './Article.css'
+import classes from './Article.module.scss'
 
 type Props = {
     title: string
@@ -9,7 +9,7 @@ type Props = {
 const Article = ({ title, description, author }: Props) => {
     return (
         <div>
-            <h2 className="article-title">{title}</h2>
+            <h2 className={classes['title']}>{title}</h2>
             <p>{description}</p>
             <div>Author: {author}</div>
         </div>
