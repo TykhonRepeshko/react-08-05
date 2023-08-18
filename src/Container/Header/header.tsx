@@ -7,6 +7,8 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { Container } from '@mui/material'
 import './header.css'
 import Logo from '../../Components/Logo/Logo'
+import Menu from 'Components/Menu/Menu'
+import CartHeader from 'Components/CartHeader/CartHeader'
 
 type Props = {}
 const header = (props: Props) => {
@@ -30,7 +32,8 @@ const header = (props: Props) => {
                     >
                         <Logo />
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Menu />
+                    <CartHeader />
                 </Toolbar>
             </Container>
         </AppBar>

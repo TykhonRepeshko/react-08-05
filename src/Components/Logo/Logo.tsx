@@ -1,4 +1,4 @@
-import logo from '../../Assets/Logo.svg'
+import logo from 'Assets/Logo.svg'
 
 type Props = {}
 const Logo = (props: Props) => {
