@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { Container } from '@mui/material'
 import './header.css'
+import Logo from '../../Components/Logo/Logo'
 
 type Props = {}
 const header = (props: Props) => {
@@ -27,7 +28,7 @@ const header = (props: Props) => {
                         component="div"
                         sx={{ flexGrow: 1 }}
                     >
-                        News
+                        <Logo />
                     </Typography>
                     <Button color="inherit">Login</Button>
                 </Toolbar>
