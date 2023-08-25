@@ -31,7 +31,14 @@ const ProductListItem = ({
                 <div className="product-price">
                     Price: <span>${price}</span>
                 </div>
-                <Button variant="outlined">Add to cart</Button>
+                <div className="product-quantity">
+                    <Button variant="outlined">-</Button>
+                    <TextField value="1" size="small" />
+                    <Button variant="outlined">+</Button>
+                </div>
+                <div className="btns-wrap">
+                    <Button variant="outlined">Add to cart</Button>
+                </div>
             </CardContent>
         </Card>
     )
