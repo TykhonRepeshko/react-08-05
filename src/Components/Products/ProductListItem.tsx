@@ -26,7 +26,7 @@ class ProductListItem extends Component<Props, State> {
         }))
     }
 
-    onDecrementClick = () => {
+    onDecrementClick() {
         this.setState((prevSate) => ({
             count: prevSate.count - 1,
         }))
@@ -50,7 +50,8 @@ class ProductListItem extends Component<Props, State> {
                     <div className="product-quantity">
                         <Button
                             variant="outlined"
-                            onClick={this.onDecrementClick}
+                            onClick={() => this.onDecrementClick()}
+                            disabled={this.state.count <= 1}
                         >
                             -
                         </Button>
