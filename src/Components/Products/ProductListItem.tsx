@@ -16,23 +16,17 @@ type State = {
 }
 
 class ProductListItem extends Component<Props, State> {
-    constructor(props: Props) {
-        super(props)
-        this.state = {
-            count: 1,
-        }
-
-        this.onIncrementClick = this.onIncrementClick.bind(this)
-        this.onDecrementClick = this.onDecrementClick.bind(this)
+    state = {
+        count: 1,
     }
 
-    onIncrementClick() {
+    onIncrementClick = () => {
         this.setState((prevSate) => ({
             count: prevSate.count + 1,
         }))
     }
 
-    onDecrementClick() {
+    onDecrementClick = () => {
         this.setState((prevSate) => ({
             count: prevSate.count - 1,
         }))
@@ -47,9 +41,7 @@ class ProductListItem extends Component<Props, State> {
                         <img src={image} alt={title} />
                     </div>
                     <h2 className="product-title">{title}</h2>
-                    <p className="product-description">
-                        {this.props.description}
-                    </p>
+                    <p className="product-description">{description}</p>
                     <div className="product-features">Type: {type}</div>
                     <div className="product-features">Capacity: {capacity}</div>
                     <div className="product-price">
