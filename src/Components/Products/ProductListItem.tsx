@@ -1,6 +1,7 @@
 import { Button, Card, CardContent, TextField } from '@mui/material'
 import './ProductListItem.scss'
 import { Component } from 'react'
+import { green } from '@mui/material/colors'
 
 type Props = {
     title: string
@@ -13,11 +14,13 @@ type Props = {
 
 type State = {
     count: number
+    color: string
 }
 
 class ProductListItem extends Component<Props, State> {
     state = {
         count: 1,
+        color: 'green',
     }
 
     onIncrementClick = () => {
@@ -29,6 +32,12 @@ class ProductListItem extends Component<Props, State> {
     onDecrementClick() {
         this.setState((prevSate) => ({
             count: prevSate.count - 1,
+        }))
+    }
+
+    changeColor = () => {
+        this.setState((prevState) => ({
+            color: prevState.color === 'green' ? 'red' : 'green',
         }))
     }
 
@@ -47,6 +56,13 @@ class ProductListItem extends Component<Props, State> {
                     <div className="product-price">
                         Price: <span>${price}</span>
                     </div>
+                    <div>
+                        Color:{' '}
+                        <span className={this.state.color}>
+                            {this.state.color}
+                        </span>
+                    </div>
+                    <button onClick={this.changeColor}>Change color</button>
                     <div className="product-quantity">
                         <Button
                             variant="outlined"
