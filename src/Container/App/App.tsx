@@ -12,7 +12,6 @@ const App = (props: Props) => {
                 <CssBaseline />
                 <Header />
                 <Main />
-                <Home />
             </StyledEngineProvider>
         </>
     )
